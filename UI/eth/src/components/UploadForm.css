@@ -1,0 +1,106 @@
+  .uploadforminput[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-family: 'Jost', sans-serif;
+  }
+  
+  .uploadforminput[type=submit] {
+    width: 100%;
+    background-color: #04BEFE;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+  }
+  
+  .uploadforminput[type=submit]:hover {
+    background-color: #4CAF50;
+    font-family: 'Jost', sans-serif;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .uploadform {
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+  .uploadform_h1 {
+    font-size: 35px;
+    margin-bottom: 50px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+  }
+
+  .uploadform_label {
+    text-align: left;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .uploadforminput[type=text]:focus {
+    outline: none;
+    border-color: #04BEFE; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+  }
+
+  .uploadforminput[type=text]:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .descriptionbox {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-family: 'Jost', sans-serif;
+  }
+
+  .descriptionbox:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .descriptionbox:focus {
+    outline: none;
+    border-color: #04BEFE; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+  }
+
+  .metadata--pre {
+    margin: 10px 0;
+    text-align: left;
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    background-color: #ededed;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    max-width: 100%;
+  }
+
+  #confidentiality:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  #confidentiality:focus {
+    outline: none;
+    border-color: #04BEFE; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+#confidentiality:focus option:checked {
+  color: rgb(164, 164, 164);
+}
