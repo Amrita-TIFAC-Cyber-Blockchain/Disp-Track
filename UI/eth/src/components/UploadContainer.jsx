@@ -1,45 +1,43 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
-import { useStateProvider } from '../context/StateContext';
-import { reducerCases } from '../context/Constants';
-import {useEffect} from 'react'
-
+import { reducerCases } from "../context/Constants";
+import { useStateProvider } from "../context/StateContext";
 
 function UploadContainer() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
 
-  const [{fileInfo},dispatch] = useStateProvider(undefined);
+  const [{ fileInfo }, dispatch] = useStateProvider(undefined);
 
-  useEffect(()=>{
+  useEffect(() => {
     dispatch({
-      type:reducerCases.SET_FILE_DATA,fileInfo:undefined
-    })
-  },[])
-  
+      type: reducerCases.SET_FILE_DATA,
+      fileInfo: undefined,
+    });
+  }, []);
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     if (file) {
       setSelectedFile(file);
-      dispatch({ 
-        type:reducerCases.SET_FILE_DATA,fileInfo:file
+      dispatch({
+        type: reducerCases.SET_FILE_DATA,
+        fileInfo: file,
       });
-      
     }
   };
 
   const handleDrop = (event) => {
     event.preventDefault();
-    setIsDragging(false); 
+    setIsDragging(false);
     const file = event.dataTransfer.files[0];
     if (file) {
       setSelectedFile(file);
 
-      dispatch({ 
-        type:reducerCases.SET_FILE_DATA,fileInfo:file
-      });    
-        
+      dispatch({
+        type: reducerCases.SET_FILE_DATA,
+        fileInfo: file,
+      });
     }
   };
 
@@ -48,17 +46,18 @@ function UploadContainer() {
     event.preventDefault();
     setIsDragging(true);
   };
-  const handleDragOverLeave=(event)=>{
-    event.preventDefault()
-    setIsDragging(false)
-  }
+  const handleDragOverLeave = (event) => {
+    event.preventDefault();
+    setIsDragging(false);
+  };
 
-  
-  const containerClassName = isDragging ? 'upload-container_dark' : 'upload-container';
+  const containerClassName = isDragging
+    ? "upload-container_dark"
+    : "upload-container";
 
   return (
-    <>  
-      {selectedFile && <Navigate to="/DisP-Track/upload"></Navigate>}
+    <>
+      {selectedFile && <Navigate to="/DispTrack/UI/eth/upload"></Navigate>}
 
       <div
         className={containerClassName}

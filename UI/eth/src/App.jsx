@@ -1,29 +1,35 @@
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
-import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import MainContent from "./components/MainContent";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import UploadForm from "./components/UploadForm";
-import {StateProvider} from "./context/StateContext";
-import reducer, { initialState } from "./context/StateReducer";
+import Navbar from "./components/Navbar";
 import RetrieveDetails from "./components/RetrieveDetails";
-
+import UploadForm from "./components/UploadForm";
+import { StateProvider } from "./context/StateContext";
+import reducer, { initialState } from "./context/StateReducer";
 
 function App() {
-
   return (
-    <div className="mainApp">
-      <StateProvider  initialState={initialState} reducer={reducer}>
-        <Navbar />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/DisP-Track" element={<MainContent />}></Route>
-            <Route path="/DisP-Track/upload" element={<UploadForm />}></Route>
-            <Route path="/Disp-Track/retrieve" element={<RetrieveDetails/>}></Route>
-          </Routes>
-        </BrowserRouter>
-      </StateProvider>
-    </div>
-  )
+    <>
+      <div className="mainApp">
+        <StateProvider initialState={initialState} reducer={reducer}>
+          <ToastContainer />
+          <BrowserRouter>
+            <Navbar />
+            <Routes>
+              <Route path="/DispTrack/UI/eth/" element={<MainContent />}></Route>
+              <Route path="/DispTrack/UI/eth/upload" element={<UploadForm />}></Route>
+              <Route path="/DispTrack/UI/eth/retrieve" element={<RetrieveDetails />}></Route>
+              <Route path="*" element={<Navigate to="/DispTrack/UI/eth/" />}></Route>
+            </Routes>
+          </BrowserRouter>
+        </StateProvider>
+        <Footer />
+      </div>
+    </>
+  );
 }
 
 export default App;
