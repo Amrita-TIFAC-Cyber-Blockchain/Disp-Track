@@ -1,0 +1,129 @@
+
+{
+  "$schema": "https://github.com/hyperledger-labs/fablo/releases/download/1.2.0/schema.json",
+  "global": {
+    "fabricVersion": "2.4.7",
+    "tls": true,
+    "peerDevMode": false,
+    "tools": {
+      "fabloRest": true,
+      "explorer": true
+    }
+  },
+  "orgs": [
+    {
+      "organization": {
+        "name": "Orderer",
+        "domain": "orderer.amrita.edu"
+      },
+      "orderers": [
+        {
+          "groupName": "group1",
+          "type": "raft",
+          "instances": 3
+        }
+      ]
+    },
+    {
+      "organization": {
+        "name": "Coimbatore",
+        "domain": "cb.amrita.edu"
+      },
+      "peer": {
+        "instances": 1,
+        "db": "LevelDb"
+      },
+      "orderers": [
+        {
+          "groupName": "group2",
+          "type": "solo",
+          "instances": 1
+        }
+      ]
+    },
+    {
+      "organization": {
+        "name": "Amritapuri",
+        "domain": "am.amrita.edu"
+      },
+      "peer": {
+        "instances": 1,
+        "db": "LevelDb"
+      },
+      "orderers": [
+        {
+          "groupName": "group3",
+          "type": "solo",
+          "instances": 1
+        }
+      ]
+    },
+    {
+      "organization": {
+        "name": "Bengaluru",
+        "domain": "bl.amrita.edu"
+      },
+      "peer": {
+        "instances": 1,
+        "db": "LevelDb"
+      },
+      "orderers": [
+        {
+          "groupName": "group4",
+          "type": "solo",
+          "instances": 1
+        }
+      ]
+    },
+    {
+      "organization": {
+        "name": "Chennai",
+        "domain": "ch.amrita.edu"
+      },
+      "peer": {
+        "instances": 1,
+        "db": "LevelDb"
+      }
+    }
+  ],
+  "channels": [
+    {
+      "name": "amma",
+      "orgs": [
+        {
+          "name": "Coimbatore",
+          "peers": [
+            "peer0"
+          ]
+        },
+        {
+          "name": "Amritapuri",
+          "peers": [
+            "peer1"
+          ]
+        },
+		{
+          "name": "Chennai",
+          "peers": [
+            "peer2"
+          ]
+        },
+		{
+          "name": "Bengaluru",
+          "peers": [
+            "peer3"
+          ]
+        }
+      ]
+    }
+  ],
+  "chaincodes": [
+    {
+      "name": "default	",
+      "version": "0.0.1",
+      "lang": "node",
+      "channel": "amma",
+      "directory": "./chaincodes/chaincode-kv-node"
+    }
+  ]
+}
