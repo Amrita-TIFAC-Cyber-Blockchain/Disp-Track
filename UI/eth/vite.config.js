@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/Disp-Track/UI/eth/",
+  base: "/DisP-Track/UI/eth/",
   plugins: [react()],
 })
