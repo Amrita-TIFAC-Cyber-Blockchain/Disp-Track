@@ -18,7 +18,7 @@ function RetrieveDetails() {
   if (redirect_page == false) {
     return (
       <>
-        <Navigate to={"/DispTrack/UI/eth/"}></Navigate>
+        <Navigate to={"/DisP-Track/UI/eth/"}></Navigate>
       </>
     );
   }
