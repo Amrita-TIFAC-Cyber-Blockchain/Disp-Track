@@ -63,7 +63,7 @@ function RetrieveContainer() {
 
   return (
     <div className="retrievecontainer">
-      {redir && <Navigate to="/DispTrack/UI/eth/retrieve/"></Navigate>}
+      {redir && <Navigate to="/DisP-Track/UI/eth/retrieve/"></Navigate>}
       <form onSubmit={getHandler}>
         <input
           type="text"
