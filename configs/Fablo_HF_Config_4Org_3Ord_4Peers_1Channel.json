@@ -4,6 +4,7 @@
   "global": {
     "fabricVersion": "2.4.7",
     "tls": true,
+    "engine": "docker",
     "peerDevMode": false,
     "tools": {
       "fabloRest": true,
@@ -119,7 +120,7 @@
   ],
   "chaincodes": [
     {
-      "name": "default	",
+      "name": "default",
       "version": "0.0.1",
       "lang": "node",
       "channel": "amma",
