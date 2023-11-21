@@ -1,12 +1,30 @@
-# DisP-Track 
-![](https://img.shields.io/badge/Domain-Blockchain-blue) ![](https://img.shields.io/badge/Blockchain-Hyperledger_Fabric-brown) <br/> 
-Distributed Document Provenance Tracker.
+# DisP-Track: Distributed Provenance Tracker
+![](https://img.shields.io/badge/Domain-Blockchain-blue) ![](https://img.shields.io/badge/Blockchain-Hyperledger_Fabric-brown) ![](https://img.shields.io/badge/Language-JavaScript-gold) ![](https://img.shields.io/badge/Deployment-Fablo-gold) <br/> 
 
 ## Features
-- Create/Add Document Metadata
-- Add Ownership
-- Transfer Ownership
-- Remove/Delete Document Metadata
+<details close>
+    <summary><b>Create/Add Document Metadata</b></summary>
+<br>
+
+</details>
+
+<details close>
+    <summary><b>Add Ownership</b></summary>
+<br>
+
+</details>
+
+<details close>
+    <summary><b>Transfer Ownership</b></summary>
+<br>
+
+</details>
+
+<details close>
+    <summary><b>Remove/Delete Document Metadata</b></summary>
+<br>
+
+</details>
 
 ## Installation and Usage
 ### Docker 
