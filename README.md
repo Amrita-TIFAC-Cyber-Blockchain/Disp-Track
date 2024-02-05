@@ -1,4 +1,4 @@
-# DisP-Track: Distributed Provenance Tracker
+# Distributed Provenance Tracker for Document
 ![](https://img.shields.io/badge/Domain-Blockchain-blue) ![](https://img.shields.io/badge/Blockchain-Hyperledger_Fabric-brown) ![](https://img.shields.io/badge/Language-JavaScript-gold) ![](https://img.shields.io/badge/Deployment-Fablo-gold) ![](https://img.shields.io/badge/Container-Docker-silver) <br/> 
 
 ## Features
