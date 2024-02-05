@@ -1,5 +1,5 @@
 # Distributed Provenance Tracker for Document
-![](https://img.shields.io/badge/Domain-Blockchain-blue) ![](https://img.shields.io/badge/Blockchain-Hyperledger_Fabric-brown) ![](https://img.shields.io/badge/Language-JavaScript-gold) ![](https://img.shields.io/badge/Deployment-Fablo-gold) ![](https://img.shields.io/badge/Container-Docker-silver) <br/> 
+![](https://img.shields.io/badge/Domain-Blockchain-blue) ![](https://img.shields.io/badge/Blockchain-Hyperledger_Fabric-brown) ![](https://img.shields.io/badge/Language-JavaScript-gold) ![](https://img.shields.io/badge/Deployment_Framework-Fablo-gold) ![](https://img.shields.io/badge/Deployment_Framework-Falcon-gold) ![](https://img.shields.io/badge/Deployment_Framework-Bevel-gold) ![](https://img.shields.io/badge/Container-Docker-silver) ![](https://img.shields.io/badge/Container-Kubernetes-silver)<br/> 
 
 ## Features
 <details close>
